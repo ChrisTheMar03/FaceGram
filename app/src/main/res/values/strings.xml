@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FaceGram</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_inicio">Best social app to make new friends</string>
+    <string name="login">Login</string>
+    <string name="singup">Guest</string>
+    <string name="descriptionImage">Social</string>
+</resources>

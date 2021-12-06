@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/white"
+    app:cardPreventCornerOverlap="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <!-- Footer -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        >
+
+        <!-- Imagen-hn -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="50dp"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/white"
+            >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_user_header"
+                android:contentDescription="@string/descriptionImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_opcion"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toEndOf="@+id/materialCardView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_user_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Andrea Bichota"
+                android:textColor="@color/gray1"
+                android:textStyle="bold"
+                android:padding="4dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_user_root_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:text="andrea145"
+                android:textColor="@color/gray1"
+                android:paddingHorizontal="5dp"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_opcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="50dp"
+            >
+
+            <ImageButton
+                android:id="@+id/btn_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:contentDescription="botonOpcion"
+                android:src="@drawable/more_options"
+                android:padding="8dp"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp"
+            >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_user_center"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="@color/white"
+                android:contentDescription="@string/descriptionImage"
+                android:scaleType="centerCrop"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btn_corazon_footer"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/descriptionImage"
+                    android:src="@drawable/heart" />
+
+                <TextView
+                    android:id="@+id/txt_count_heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="4.2k"
+                    android:textColor="@color/black1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/descriptionImage"
+                    android:src="@drawable/comment" />
+
+                <TextView
+                    android:id="@+id/txt_count_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="4.6k"
+                    android:textColor="@color/black1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearlayout4"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/descriptionImage"
+                    android:src="@drawable/save_instagram" />
+
+                <TextView
+                    android:id="@+id/txt_saves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="1.2k"
+                    android:textColor="@color/black1" />
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
