@@ -32,12 +32,18 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.containerDetail, new DetalleFragment())
+                    .commit();
+        }
+        /*
         imageRequester=ImageRequester.getInstance();
         btnBack=findViewById(R.id.btn_back_detail);
         btnCampana=findViewById(R.id.btn_campana_detail);
         txtnombre=findViewById(R.id.txt_root_detail);
         imgUser=findViewById(R.id.img_user_detail);
-
 
 
         if(savedInstanceState==null){
@@ -88,10 +94,7 @@ public class DetailActivity extends AppCompatActivity {
                 .setPositiveButton("Aceptar",null)
                 .create();
         alertDialog.show();
+
+    }*/
     }
-
-    public void viewTag(){
-
-    }
-
 }
